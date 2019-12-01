@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.StartActivity">
+
+    <ImageView
+        android:id="@+id/main_logo"
+        android:layout_width="231dp"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_logo" />
+
+    <EditText
+        android:id="@+id/start_login_edit"
+        android:layout_width="232dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/edit_radius"
+        android:backgroundTint="#999898"
+        android:fontFamily="Roboto"
+        android:hint="Логин"
+        android:paddingLeft="18dp"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="@+id/main_logo"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="@+id/main_logo"
+        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+
+    <EditText
+        android:id="@+id/start_password_edit"
+        android:layout_width="232dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="26dp"
+        android:hint="Пароль"
+        android:background="@drawable/edit_radius"
+        android:backgroundTint="#999898"
+        app:layout_constraintEnd_toEndOf="@+id/main_logo"
+        app:layout_constraintStart_toStartOf="@+id/main_logo"
+        app:layout_constraintTop_toBottomOf="@+id/start_login_edit"
+        android:paddingLeft="18dp"
+        android:fontFamily="Roboto"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/enter_button"
+        android:layout_width="277dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:text="Войти"
+        android:background="@drawable/button_radius"
+        android:backgroundTint="#7C7B7B"
+        app:layout_constraintEnd_toEndOf="@+id/start_password_edit"
+        app:layout_constraintStart_toStartOf="@+id/start_password_edit"
+        app:layout_constraintTop_toBottomOf="@+id/start_password_edit"
+        android:fontFamily="Roboto"
+        android:textSize="26dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/start_reg_button"
+        android:layout_width="277dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="67dp"
+        android:text="Регистрация"
+        android:textStyle="normal"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="@+id/enter_button"
+        app:layout_constraintStart_toStartOf="@+id/enter_button"
+        app:layout_constraintTop_toBottomOf="@+id/enter_button"
+        android:fontFamily="Roboto"
+        android:textSize="13dp"
+        android:textAllCaps="false"
+        android:background="@drawable/button_border_bottom"
+
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

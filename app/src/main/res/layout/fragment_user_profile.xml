@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FFFFFF">
+
+
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="331dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="132dp"
+        android:background="@drawable/profile_view_radius"
+        android:backgroundTint="#C4C4C4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/main_profile_logo"
+        android:layout_width="176dp"
+        android:layout_height="227dp"
+        android:src="@drawable/main_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="331dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:text="О приложении"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="331dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:text="Выход"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:text="Выход" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="331dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:text="Сертификаты"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        tools:text="Сертификаты" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="331dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:gravity="start"
+        android:text="Настройки"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
