@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MenuActivity"
-    android:background="#FFFFFF">
+    android:background="@color/background">
 
 
     <TextView
@@ -13,9 +13,8 @@
         android:layout_width="293dp"
         android:layout_height="69dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:backgroundTint="#C4C4C4"
-        android:background="@drawable/button_radius"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/radius60"
         android:fontFamily="Roboto"
         android:gravity="center"
         android:text="Мои курсы"
@@ -24,12 +23,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/course_line"
+        android:layout_width="65dp"
+        android:layout_height="15dp"
+        android:src="@drawable/course_line"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/my_courses_title"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/courses_recycler_view"
         android:layout_width="293dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/my_courses_title"
+        android:layout_below="@+id/course_line"
         android:layout_above="@+id/linearLayout"
         android:layout_marginTop="45dp"
        android:layout_centerHorizontal="true"/>

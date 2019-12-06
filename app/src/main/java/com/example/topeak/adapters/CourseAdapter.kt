@@ -3,6 +3,7 @@ package com.example.topeak.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.topeak.R
@@ -33,9 +34,17 @@ class CourseAdapter: RecyclerView.Adapter<CourseAdapter.CourseHolder>() {
     inner class CourseHolder(view: View): RecyclerView.ViewHolder(view){
 
         fun bind(position: Int){
+            val idImg = itemView.findViewById<ImageView>(R.id.icon_course)
             val idText = itemView.findViewById<TextView>(R.id.course_name)
+            if(position==0){
+            idImg.setImageResource(R.drawable.course1_icon)
             idText.text = "${courseList[position].name}"
         }
+            else if(position==1){
+                idImg.setImageResource(R.drawable.course2_icon)
+                idText.text = "${courseList[position].name}"
+            }
     }
 
+}
 }

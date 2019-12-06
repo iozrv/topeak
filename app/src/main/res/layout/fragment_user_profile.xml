@@ -2,95 +2,105 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#FFFFFF">
-
-
+    android:background="@color/background"
+    android:orientation="vertical">
 
 
     <View
         android:id="@+id/view"
-        android:layout_width="331dp"
-        android:layout_height="204dp"
+        android:layout_width="291dp"
+        android:layout_height="180dp"
         android:layout_marginTop="132dp"
         android:background="@drawable/profile_view_radius"
-        android:backgroundTint="#C4C4C4"
+        android:backgroundTint="#6641324E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/main_profile_logo"
+        android:id="@+id/photo_user"
         android:layout_width="176dp"
         android:layout_height="227dp"
-        android:src="@drawable/main_logo"
+        android:src="@drawable/place_for_photo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <Button
         android:id="@+id/button2"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="331dp"
+        android:layout_width="250dp"
         android:layout_height="43dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
+        android:drawableRight="@drawable/ic_arrow"
         android:gravity="start"
         android:text="О приложении"
         android:textAllCaps="false"
-        android:textSize="17dp"
-        app:layout_constraintEnd_toEndOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button3"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
-
 
     <Button
         android:id="@+id/button"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="331dp"
+        android:layout_width="250dp"
         android:layout_height="43dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         android:gravity="start"
         android:text="Выход"
+        android:drawableRight="@drawable/ic_arrow"
+
         android:textAllCaps="false"
-        android:textSize="17dp"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/button2"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/button2"
         tools:text="Выход" />
 
     <Button
         android:id="@+id/button3"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="331dp"
+        android:layout_width="250dp"
         android:layout_height="43dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         android:gravity="start"
+        android:drawableRight="@drawable/ic_arrow"
+
         android:text="Сертификаты"
         android:textAllCaps="false"
-        android:textSize="17dp"
-        app:layout_constraintEnd_toEndOf="@+id/button4"
-        app:layout_constraintStart_toStartOf="@+id/button4"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/button4"
         tools:text="Сертификаты" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="331dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="250dp"
         android:layout_height="43dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="52dp"
         android:gravity="start"
+        android:drawableRight="@drawable/ic_arrow"
+
         android:text="Настройки"
         android:textAllCaps="false"
-        android:textSize="17dp"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

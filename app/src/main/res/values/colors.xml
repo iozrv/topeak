@@ -3,4 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="background">#F0EAF5</color>
+    <color name="basic">#41324E</color>
+    <color name="orange">#F17D34</color>
+    <color name="form">#8041324E</color>
+    <color name="form_text_color">#F0EAF5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="basic_text_color">#41324E</color>
+    <color name="black">#000000</color>
 </resources>

@@ -1,8 +1,10 @@
 package com.example.topeak.activities
 
+import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.topeak.R
 import com.example.topeak.fragments.SearchFragment
@@ -57,25 +59,41 @@ class MenuActivity : AppCompatActivity() {
         val searchFragment = SearchFragment()
         fm.beginTransaction()
             .replace(R.id.menu_fragment_container, searchFragment)
-            .addToBackStack("search_fragment")
             .commit()
+
+        searchButton.setColorFilter(resources.getColor(R.color.orange))
+        coursesButton.setColorFilter(resources.getColor(R.color.basic))
+        profileButton.setColorFilter(resources.getColor(R.color.basic))
+
     }
 
     fun toUserCoursesFragment(){
         val userCoursesFragment = UserCoursesFragment()
         fm.beginTransaction()
             .replace(R.id.menu_fragment_container, userCoursesFragment)
-            .addToBackStack("user_courses_fragment")
             .commit()
+        coursesButton.setColorFilter(resources.getColor(R.color.orange))
+        profileButton.setColorFilter(resources.getColor(R.color.basic))
+        searchButton.setColorFilter(resources.getColor(R.color.basic))
+
+
     }
 
     fun toUserProfileFragment(){
         val userProfileFragment = UserProfileFragment()
         fm.beginTransaction()
             .replace(R.id.menu_fragment_container, userProfileFragment)
-            .addToBackStack("user_profile_fragment")
             .commit()
+        profileButton.setColorFilter(resources.getColor(R.color.orange))
+        searchButton.setColorFilter(resources.getColor(R.color.basic))
+        coursesButton.setColorFilter(resources.getColor(R.color.basic))
+
+
     }
+
+
+
+
 
 
 

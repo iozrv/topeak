@@ -1,11 +1,13 @@
 package com.example.topeak.fragments
 
+import android.media.Image
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.topeak.R
@@ -28,11 +30,14 @@ class UserCoursesFragment: androidx.fragment.app.Fragment()  {
         val view = inflater.inflate(R.layout.fragment_user_courses, container, false)
 
         coursesRecyclerView = view.findViewById(R.id.courses_recycler_view)
-
-        coursesRecyclerView.layoutManager = LinearLayoutManager(container!!.context)
+        coursesRecyclerView.layoutManager = LinearLayoutManager(container!!.context) as RecyclerView.LayoutManager?
         coursesRecyclerView.adapter=CourseAdapter()
         return view
 
     }
+
+
+
+
 
 }
