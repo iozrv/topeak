@@ -21,8 +21,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/main_profile_logo"
+    <ImageButton
+        android:id="@+id/profilePic"
         android:layout_width="176dp"
         android:layout_height="227dp"
         android:src="@drawable/main_logo"
@@ -91,6 +91,16 @@
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
+    <TextView
+        android:id="@+id/profile_nickname"
+        android:layout_width="74dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/profile_view_radius"
+        android:text="Загрузка..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
