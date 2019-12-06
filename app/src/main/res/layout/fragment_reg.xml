@@ -31,6 +31,20 @@
         app:layout_constraintEnd_toEndOf="@+id/reg_password_edit"
         app:layout_constraintStart_toStartOf="@+id/reg_password_edit"
         app:layout_constraintTop_toBottomOf="@+id/reg_password_edit" />
+    <EditText
+        android:id="@+id/reg_login_edit"
+        android:layout_width="219dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="68dp"
+        android:hint="Логин"
+        app:layout_constraintEnd_toEndOf="@+id/end_reg_button"
+        app:layout_constraintStart_toStartOf="@+id/end_reg_button"
+        app:layout_constraintTop_toBottomOf="@+id/end_reg_button"
+        android:textSize="12dp"
+        android:textAlignment="center"
+        android:fontFamily="Roboto"
+        android:textColorHint="#444444"/>
+
 
     <EditText
         android:id="@+id/reg_password_edit"

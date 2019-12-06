@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "214643043118",
+    "firebase_url": "https://to-peak.firebaseio.com",
+    "project_id": "to-peak",
+    "storage_bucket": "to-peak.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214643043118:android:d58484c1eab9d6049728bf",
+        "android_client_info": {
+          "package_name": "com.example.topeak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214643043118-pdq2h983t9al9oojitn125ss6obdk7d1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.topeak",
+            "certificate_hash": "b391d220f9e3115fc8d810d36a2213d01d2f777a"
+          }
+        },
+        {
+          "client_id": "214643043118-vfqk8o4dfne60i7e60iv71oh96bt7an7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJiK0JSE5lXDDL5euplP34orzZ5I7DZII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214643043118-vfqk8o4dfne60i7e60iv71oh96bt7an7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
