@@ -27,14 +27,12 @@ class StartActivity : AppCompatActivity() {
         val regFragment = RegFragment()
         fm.beginTransaction()
             .replace(R.id.start_fragment_container, regFragment)
-            .addToBackStack("reg_fragment")
             .commit()
     }
     fun toStartFragment(){
         val startFragment = StartFragment()
         fm.beginTransaction()
             .replace(R.id.start_fragment_container, startFragment)
-            .addToBackStack("reg_fragment")
             .commit()
     }
 
