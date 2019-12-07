@@ -7,10 +7,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.topeak.R
-import com.example.topeak.fragments.SearchFragment
-import com.example.topeak.fragments.StartFragment
-import com.example.topeak.fragments.UserCoursesFragment
-import com.example.topeak.fragments.UserProfileFragment
+import com.example.topeak.fragments.*
 
 class MenuActivity : AppCompatActivity() {
 
@@ -91,6 +88,17 @@ class MenuActivity : AppCompatActivity() {
 
     }
 
+    fun toCourseFragment(){
+        val courseFragment = CourseFragment()
+        fm.beginTransaction()
+            .replace(R.id.menu_fragment_container, courseFragment)
+            .commit()
+        coursesButton.setColorFilter(resources.getColor(R.color.orange))
+        profileButton.setColorFilter(resources.getColor(R.color.basic))
+        searchButton.setColorFilter(resources.getColor(R.color.basic))
+
+
+    }
 
 
 

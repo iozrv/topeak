@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <TextView
+        android:id="@+id/question_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="вопрос"/>
+    <Button
+        android:id="@+id/answer_one"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/question_point"
+        android:layout_centerHorizontal="true"
+        android:text="A"/>
+    <Button
+        android:id="@+id/answer_two"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/answer_one"
+        android:layout_centerHorizontal="true"
+        android:text="B"
+        />
+    <Button
+        android:id="@+id/answer_three"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/answer_two"
+        android:layout_centerHorizontal="true"
+        android:text="C"/>
+
+    <Button
+        android:id="@+id/answer_four"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/answer_three"
+        android:layout_centerHorizontal="true"
+        android:text="D" />
+
+</RelativeLayout>

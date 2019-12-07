@@ -1,12 +1,19 @@
 package com.example.topeak.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.topeak.R
+import com.example.topeak.activities.MenuActivity
+import com.example.topeak.activities.StartActivity
+import com.example.topeak.fragments.UserCoursesFragment
+import com.example.topeak.fragments.UserProfileFragment
 import com.example.topeak.models.CourseLab
 
 class CourseAdapter: RecyclerView.Adapter<CourseAdapter.CourseHolder>() {
@@ -18,8 +25,16 @@ class CourseAdapter: RecyclerView.Adapter<CourseAdapter.CourseHolder>() {
         val view: View
 
         view = LayoutInflater.from(parent.context).inflate(R.layout.course_item, parent, false)
+        view.setOnClickListener(){
+            MenuActivity().toUserProfileFragment()
+
+
+        }
+
         return CourseHolder(view)
     }
+
+
 
     override fun getItemCount(): Int = courseList.size
 
@@ -28,8 +43,16 @@ class CourseAdapter: RecyclerView.Adapter<CourseAdapter.CourseHolder>() {
         CourseLab()
         holder.bind(position)
 
+        holder.itemView.setOnClickListener{
+            (holder.itemView.context as MenuActivity).toCourseFragment()
+      //    val intent = Intent(holder.itemView.context, StartActivity::class.java)
+       //     holder.itemView.context.startActivity(intent)
+            }
+
 
     }
+
+
 
     inner class CourseHolder(view: View): RecyclerView.ViewHolder(view){
 
@@ -45,6 +68,7 @@ class CourseAdapter: RecyclerView.Adapter<CourseAdapter.CourseHolder>() {
                 idText.text = "${courseList[position].name}"
             }
     }
+
 
 }
 }
