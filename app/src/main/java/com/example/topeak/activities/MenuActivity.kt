@@ -1,13 +1,17 @@
 package com.example.topeak.activities
 
+import android.content.Intent
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.topeak.R
 import com.example.topeak.fragments.*
+import com.google.firebase.auth.FirebaseAuth
 
 class MenuActivity : AppCompatActivity() {
 
@@ -18,7 +22,6 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var profileButton: ImageButton
     private lateinit var coursesButton: ImageButton
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
@@ -28,8 +31,6 @@ class MenuActivity : AppCompatActivity() {
         fm.beginTransaction()
             .add(R.id.menu_fragment_container, userCoursesFragment)
             .commit()
-
-
     }
 
     fun initalize(){

@@ -13,6 +13,8 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.topeak.R
+import com.example.topeak.activities.MenuActivity
+import com.example.topeak.activities.StartActivity
 import com.example.topeak.adapters.CatalogAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -27,6 +29,8 @@ class UserProfileFragment: androidx.fragment.app.Fragment() {
     private lateinit var mAuth: FirebaseAuth
     private lateinit var sendPicBtn : ImageButton
     private lateinit var imageUri : Uri
+    private lateinit var logOutButton: Button
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -35,6 +39,7 @@ class UserProfileFragment: androidx.fragment.app.Fragment() {
         val view = inflater.inflate(R.layout.fragment_user_profile, container, false)
         nick = view.findViewById(R.id.profile_nickname)
         sendPicBtn = view.findViewById(R.id.profilePic)
+        logOutButton = view.findViewById(R.id.logOutBtn)
         setView()
         setListener()
         return view
@@ -44,6 +49,14 @@ class UserProfileFragment: androidx.fragment.app.Fragment() {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
             startActivityForResult(intent,0)
+        }
+        logOutButton.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+            val intent = Intent(context as MenuActivity, StartActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            activity!!.finish()
+            startActivity(intent)
         }
 
     }

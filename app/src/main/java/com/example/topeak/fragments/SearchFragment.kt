@@ -1,5 +1,6 @@
 package com.example.topeak.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.topeak.R
 import com.example.topeak.activities.MenuActivity
+import com.example.topeak.activities.StartActivity
 import com.example.topeak.adapters.CatalogAdapter
 import com.example.topeak.adapters.CourseAdapter
 
@@ -25,6 +27,8 @@ class SearchFragment : androidx.fragment.app.Fragment() {
         catalogRecyclerView = view.findViewById(R.id.catalog_recycler_view)
         catalogRecyclerView.layoutManager = LinearLayoutManager(container!!.context)
         catalogRecyclerView.adapter= CatalogAdapter()
+
+
         return view
 
     }

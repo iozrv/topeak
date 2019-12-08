@@ -1,5 +1,7 @@
 package com.example.topeak.fragments
 
+import android.app.Activity
+import android.app.ActivityManager
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.IntentCompat
 import com.example.topeak.R
 import com.example.topeak.activities.MenuActivity
 import com.example.topeak.activities.StartActivity
@@ -39,6 +43,7 @@ class StartFragment: androidx.fragment.app.Fragment() {
     private fun setListener(){
         startRegButton.setOnClickListener{
             (context as StartActivity).toRegFragment()
+
         }
 
         enterButton.setOnClickListener{
@@ -51,10 +56,9 @@ class StartFragment: androidx.fragment.app.Fragment() {
             mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val intent =
-                            Intent(context as StartActivity, MenuActivity::class.java)
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                        val intent = Intent(context as StartActivity, MenuActivity::class.java)
                         startActivity(intent)
+
                     }
                 }
                 .addOnFailureListener {
